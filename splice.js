@@ -1,0 +1,1 @@
+//remove n elementos aprtir da posição 
