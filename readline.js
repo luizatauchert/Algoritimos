@@ -1,15 +1,36 @@
-//crie uma variavel que vai refernciar a biblioteca
-const readlineSync = require("readline-sync");
+/*const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+ 
+rl.question("Qual a sua idade?", (idade) => (
+    console.log("Sua idade é:", idade);
+    rl.close();
+));*/
 
-//fazendo peruntas e armazenando as respostas 
-const nome = readlineSync.question("qual o seu nome?");
-const idade = readlineSync.question("qual a sua idade?");
-const cidade = readlineSync.question("qual a sua cidade?");
 
-//exibindo as respostas
-console.log("nome:" + nome);
-console.log("idade:" + idade);
-console.log("cidade:" + cidade);
+const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+ 
+rl.question("Digite o primeiro numero",(numero1) =>{
+    rl.question("Digite o segundo numero",(numero2) =>{
+    const resultado = Number(numero1) + Number(numero2);
+    console.log(`A soma de ${numero1} e ${numero2} e ${resultado}`);
+    
+    rl.close();
+});
+});
+
+
+
+
+
+
+
 
 
 
