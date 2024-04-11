@@ -6,5 +6,3 @@ calculaAreaRetangulo(2,5)
 calculaAreaRetangulo(3,7)
 calculeAreaRetangulo(4,7)
 
-
-
