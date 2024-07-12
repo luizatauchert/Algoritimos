@@ -1,0 +1,43 @@
+let reader = require("readline-sync")
+class Car {
+    tanque: number
+    km: number
+    marca: string
+
+    constructor(tanque:number, km:number, marca:string){
+        this.tanque = tanque
+        this.km = km
+        this.marca = marca
+    }
+
+    andar(): void{
+        let distancia = reader.question("Qual a distancia que voce quer percorrer? ")
+        let gastoGasolina = this.tanque - (distancia / this.km)
+        if(gastoGasolina < 0 ){
+            console.log("Voce não tem gasolina para percorrer essa distancia")
+        } else {
+            this.tanque = this.tanque - gastoGasolina
+            console.log("Voce gastou " + gastoGasolina + " litros de gas")
+        }
+    }
+
+    obterGasolina():number{
+        return this.tanque
+    }
+
+    adicionarGasolina(): void{
+        let gasolina = reader.question("Qual a quantidade de gasolina que voce quer adicionar")         
+        console.log("Voce abasteceu ")
+        this.tanque += gasolina
+    }
+
+    setCar(): void{
+        let marcaUp = leitor.question("Qual o nome do carro?")
+        let tanqueUp = leitor.question("Quanto você quer incerir de gasolina?")
+        let kmUp = leitor.question("Quantos km você quer andar?")
+        this.marca = marcaUp
+        this.tanque = tanqueUp
+        this.km = kmUp
+     } 
+
+}
